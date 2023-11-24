@@ -54,7 +54,7 @@ arr_2.pop(); // ['a','b']
 arr_2.pop(); // ['a']
 arr_2.pop(); // []
 
-// 4. Arr concat reverse join
+// 4.
 // CONCAT:
 const arr_3 = [1, 2, 3].concat(["a", "b", "c"]);
 // [1, 2, 3, 'a', 'b', 'c']
@@ -67,3 +67,50 @@ arr_3.reverse();
 arr_3.join(); // '1,2,3,a,b,c'
 arr_3.join(""); // '123abc'
 arr_3.join("--"); // '1--2--3--a--b--c'
+
+// // INDEX_OF & LASE_INDEX_OF
+// ['a','d','false','a','false'].indexOf('a') // 0
+
+// ['a','d','false','a','false'].lastIndexOf('false') // 4
+
+// ['a','d','false','a','false'].lastIndexOf('a') // 3
+
+// // INCLUDES
+// ['a','d','false','a','false'].includes('b') // false
+
+// ['a','d','false','a','false'].includes('a') // true
+
+// 5. Array methods
+
+// forEach was very popular before forOf
+// [10,20,33,45].forEach(function(e){
+//   console.log(e)
+// })
+
+// // map()
+// const newArr = [10,20,33,45].map(function(e){
+//   return e*100
+// })
+
+// // filter()
+// [10,20,33,45].filter(function(e){
+//   return e>20
+// })
+
+// // some()
+
+// [1,2,3,4].some((element) => {
+//   return element % 2 === 0;
+
+// }) // true
+
+// // every()
+// [1,2,3,4].every((element) => {
+//   return element % 2 === 0;
+
+// }) //false
+
+// [2,4,6,8].some((element) => {
+//   return element % 2 === 0;
+
+// }) //true
