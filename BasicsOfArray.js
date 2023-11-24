@@ -68,49 +68,49 @@ arr_3.join(); // '1,2,3,a,b,c'
 arr_3.join(""); // '123abc'
 arr_3.join("--"); // '1--2--3--a--b--c'
 
-// // INDEX_OF & LASE_INDEX_OF
-// ['a','d','false','a','false'].indexOf('a') // 0
+// INDEX_OF & LASE_INDEX_OF
+['a', 'd', 'false', 'a', 'false'].indexOf('a') // 0
 
-// ['a','d','false','a','false'].lastIndexOf('false') // 4
+['a', 'd', 'false', 'a', 'false'].lastIndexOf('false') // 4
 
-// ['a','d','false','a','false'].lastIndexOf('a') // 3
+['a', 'd', 'false', 'a', 'false'].lastIndexOf('a') // 3
 
-// // INCLUDES
-// ['a','d','false','a','false'].includes('b') // false
+// INCLUDES
+['a', 'd', 'false', 'a', 'false'].includes('b') // false
 
-// ['a','d','false','a','false'].includes('a') // true
+['a', 'd', 'false', 'a', 'false'].includes('a') // true
 
 // 5. Array methods
 
 // forEach was very popular before forOf
-// [10,20,33,45].forEach(function(e){
-//   console.log(e)
-// })
+[10, 20, 33, 45].forEach(function (e) {
+  console.log(e)
+})
 
-// // map()
-// const newArr = [10,20,33,45].map(function(e){
-//   return e*100
-// })
+// map()
+const newArr = [10, 20, 33, 45].map(function (e) {
+  return e * 100
+})
 
-// // filter()
-// [10,20,33,45].filter(function(e){
-//   return e>20
-// })
+// filter()
+[10, 20, 33, 45].filter(function (e) {
+  return e > 20
+})
 
-// // some()
+// some()
 
-// [1,2,3,4].some((element) => {
-//   return element % 2 === 0;
+[1, 2, 3, 4].some((element) => {
+  return element % 2 === 0;
 
-// }) // true
+}) // true
 
-// // every()
-// [1,2,3,4].every((element) => {
-//   return element % 2 === 0;
+// every()
+[1, 2, 3, 4].every((element) => {
+  return element % 2 === 0;
 
-// }) //false
+}) //false
 
-// [2,4,6,8].some((element) => {
-//   return element % 2 === 0;
+[2, 4, 6, 8].some((element) => {
+  return element % 2 === 0;
 
-// }) //true
+}) //true
