@@ -88,7 +88,7 @@ console.log(isUrl("https://www.example.com")); // true
 console.log(isUrl("ftp://ftp.example.com")); // true
 console.log(isUrl("invalid url")); // false
 
-function arrayExtractior(inputString) {
+function arrayExtractor(inputString) {
   const regex = /values=\[(.*?)\]/;
   const match = inputString.match(regex);
 
@@ -106,3 +106,7 @@ function arrayExtractior(inputString) {
     return "No array found in the input string.";
   }
 }
+
+console.log(
+  arrayExtractor("https://www.example.com?colors=['RED','GREEN','ORANGE']")
+);
