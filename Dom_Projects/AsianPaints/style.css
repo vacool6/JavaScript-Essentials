@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+div {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid black;
+  margin: 1rem;
+}

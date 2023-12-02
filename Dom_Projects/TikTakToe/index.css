@@ -1,0 +1,28 @@
+body {
+  background-color: violet;
+}
+
+.upper {
+  align-items: center;
+}
+
+.contain {
+  border: 1px solid;
+  width: 456px;
+  height: 456px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  border: 1px solid;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(25, 9, 116);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+}
