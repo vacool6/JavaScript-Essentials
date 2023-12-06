@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./action.js" defer></script>
+  </head>
+  <body>
+    <h1
+      style="font-size: 35px"
+      isUnderline="false"
+      isBold="false"
+      isItalic="false"
+    >
+      Change me
+    </h1>
+
+    <label for="color">Color</label>
+    <input id="color" placeholder="Enter color" />
+    <button class="colorBtn">Apply color</button>
+    <br />
+    <br />
+
+    <label for="fontSize">Size</label>
+    <input type="range" min="20" max="50" />
+    <br />
+    <br />
+
+    <button class="underline">Underline</button>
+    <button class="italic">Italic</button>
+    <button class="bold">Bold</button>
+    <br />
+    <br />
+
+    <label for="fontFamily">Font family</label>
+    <select name="fontFamily" id="fontFamily">
+      <option value="sans-serif">Sans-serif</option>
+      <option value="serif">Serif</option>
+      <option value="cursive">Cursive</option>
+    </select>
+    <br />
+    <br />
+    <button class="getProperty">Get CSS properties</button>
+    <p></p>
+  </body>
+</html>
