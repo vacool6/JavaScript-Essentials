@@ -1,37 +1,44 @@
-const input = document.querySelector("input");
-const button = document.querySelector("button");
-const ul = document.querySelector("ul");
+//Selectors
+const todoInput = document.querySelector(".todo-input");
+const addTodoItem = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
+//const filterOption = document.querySelector('.filter-todos')
 
-let todoS = [];
+//EventListener
+addTodoItem.addEventListener("click", addTodo);
 
-function addElementsToTodo() {
-  ul.innerHTML = "";
-  for (let i of todoS) {
-    const newTodo = document.createElement("li");
-    const span = document.createElement("span");
-    const btn = document.createElement("button");
+//Functions
+function addTodo(event) {
+  event.preventDefault();
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todo");
 
-    span.innerText = i;
-    btn.innerText = "Remove todo";
-    btn.addEventListener("click", () => {
-      remove(i);
-    });
+  const newTodo = document.createElement("li");
+  newTodo.innerText = todoInput.value;
+  newTodo.classList.add("todo-item");
+  todoDiv.appendChild(newTodo);
+  todoInput.value = "";
 
-    newTodo.append(span);
-    newTodo.append(btn);
-    ul.append(newTodo);
-  }
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = "Completed";
+  completedButton.classList.add("complete-btn");
+  completedButton.onclick = check;
+  todoDiv.appendChild(completedButton);
+
+  const trash = document.createElement("button");
+  trash.innerHTML = "Delete";
+  trash.classList.add("trash-btn");
+  todoDiv.appendChild(trash);
+  trash.onclick = deleteItem;
+
+  todoList.appendChild(todoDiv);
 }
 
-const remove = (ele) => {
-  todoS = todoS.filter((todo) => {
-    return todo !== ele;
-  });
-  addElementsToTodo();
-};
+function check(e) {
+  //console.log(e.target.parentElement.firstChild.classList);
+  e.target.parentElement.firstChild.classList.toggle("completed");
+}
 
-button.addEventListener("click", () => {
-  todoS.push(input.value);
-  addElementsToTodo();
-  input.value = "";
-});
+function deleteItem(e) {
+  e.target.parentElement.remove();
+}
