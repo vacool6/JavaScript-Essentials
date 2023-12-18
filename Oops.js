@@ -200,3 +200,56 @@ class EmployeeClass {
     return `INR :${this.salary} PA`;
   }
 }
+
+// Extends & supe keywords
+
+// Extends promotes inheritance
+class Animal {
+  constructor(type, isWild) {
+    this.type = type;
+    this.isWild = isWild;
+  }
+
+  canBeDomesticated() {
+    if (this.isWild) return false;
+    else return true;
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("Woof Woof!");
+  }
+
+  eat() {
+    console.log("Eats pedigree");
+  }
+}
+
+class Tiger extends Animal {
+  roar() {
+    console.log("Roar!!!");
+  }
+
+  eat() {
+    console.log("Eats raw meat");
+  }
+}
+
+// If we want more info to our extended class we can use Super
+class Dog extends Animal {
+  constructor(type, isWild, name, age) {
+    super(type, isWild);
+    // extending constructor attributes from parent
+    this.name = name;
+    this.age = age;
+  }
+  bark() {
+    console.log("Woof Woof!");
+  }
+
+  eat() {
+    console.log("Eats pedigree");
+  }
+}
+
