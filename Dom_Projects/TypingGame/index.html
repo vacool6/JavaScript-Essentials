@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./action.js" defer></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        margin: 0;
+        background-color: rgb(175, 175, 201);
+      }
+
+      .container {
+        background-color: yellow;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        width: 700px;
+        max-width: 90%;
+        border: 1px solid black;
+      }
+
+      .wpm,
+      .wpmLabel {
+        color: rgb(175, 78, 88);
+
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .timer,
+      .timerLabel {
+        font-size: 3rem;
+        color: yellow;
+        font-weight: bold;
+      }
+
+      .quote-display {
+        margin-bottom: 1rem;
+        margin-left: calc(1rem + 2px);
+        margin-left: calc(1rem - 2px);
+      }
+
+      .container-focus {
+        border: 3px solid black;
+      }
+
+      .quote-display .correct {
+        color: green;
+      }
+
+      .incorrect {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="Timer" class="timerLabel">Timer</label>
+    <div class="timer" id="timer">0</div>
+    <label for="wpm" class="wpmLabel">WPM</label>
+    <div class="wpm" id="wpm">0</div>
+    <div class="container" id="container">
+      <div class="quote-display" id="quoteDisplay"></div>
+    </div>
+  </body>
+</html>
