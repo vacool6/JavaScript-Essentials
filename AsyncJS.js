@@ -149,3 +149,4 @@ fakeReqPromise("/store.com/page1")
   });
 
 // Note: To handle errors in async await we can make use of try catch
+// Modified
